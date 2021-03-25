@@ -29,7 +29,8 @@ exports.enterAddressInfo = function(req, res) {
 
         // get the result string
         let qrCodeResult = value.result;
-        let hesCode = req.body.hescode;
+        let hesCode = qrCodeResult.split('|')[1];
+        console.log(hesCode)
 
         // // buffer the result string to a file
         // QRCode.toBuffer(qrCodeResult, function (error, buffer) {

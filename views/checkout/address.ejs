@@ -15,12 +15,6 @@
             <i class="fas fa-shipping-fast"></i>
             Adres Bilgileri
           </h1>
-          <div class="col-1">
-            <div>
-              <label for="hescode">HES KODUNUZ</label>
-              <input type="text" name="hescode" required/>
-            </div>
-          </div>
           <div>
             <label for="hesqrcode"
               >HES QR Kodunuzu içeren fotoğrafı yükleyin</label
@@ -45,6 +39,24 @@
               />
             </div>
           </div>
+
+
+          <div class="col-1">
+            <div>
+              <label for="cities">ŞEHİR</label>
+              <select name="cities" id="cities">
+              </select>
+            </div>
+          </div>
+          <div class="col-1">
+            <div>
+              <label for="towns">İLÇE</label>
+              <select name="towns" id="towns">
+              </select>
+            </div>
+          </div>
+
+
           <div class="col-1">
             <div>
               <label for="addressline2">ADRES SATIRI 2</label>
@@ -77,5 +89,8 @@
         </form>
       </div>
     </div>
+
+    <script src="/javascripts/address.js"></script>
+
   </body>
 </html>
