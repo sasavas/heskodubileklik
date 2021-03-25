@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sipariş Detayları</title>
+    <link rel="stylesheet" href="/stylesheets/form.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <form action="/checkout/enteraddress" method="POST">
+          <h1>
+            <i class="fas fa-shipping-fast"></i>
+            Adres Bilgileri
+          </h1>
+          <div class="col-1">
+            <div>
+              <label for="hescode">HES KODUNUZ</label>
+              <input type="text" name="hescode" />
+            </div>
+          </div>
+          <div>
+            <label for="hesqrcode"
+              >HES QR Kodunuzu içeren fotoğrafı yükleyin</label
+            >
+            <input
+              type="file"
+              id="hesqrcode"
+              name="hesqrcode"
+			  value="Fotoğraf seç"
+              accept="image/png, image/jpeg"
+            />
+          </div>
+
+          <div class="col-1">
+            <div>
+              <label for="addressline1">ADRES SATIRI 1</label>
+              <input
+                type="text"
+                name="addressline1"
+                placeholder="Mahalle, Sokak..."
+              />
+            </div>
+          </div>
+          <div class="col-1">
+            <div>
+              <label for="addressline2">ADRES SATIRI 2</label>
+              <input
+                type="text"
+                name="addressline2"
+                placeholder="Apartman, Kat, Daire Numarası..."
+              />
+            </div>
+          </div>
+          <div class="col-2">
+            <div>
+              <label for="city">ŞEHİR</label>
+              <input type="text" name="city" />
+            </div>
+            <div>
+              <label for="zip">POSTA KODU</label>
+              <input type="text" name="zip" />
+            </div>
+          </div>
+          <div class="col-1">
+            <div>
+              <label for="email">EPOSTA</label>
+              <input type="email" name="email" />
+            </div>
+          </div>
+          <div class="btns">
+            <a id="btnback" class="btn" href="/">ÖDEME ADIMINA GİT</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

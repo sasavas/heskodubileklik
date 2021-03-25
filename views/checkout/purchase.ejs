@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sipariş Detayları</title>
+    <link rel="stylesheet" href="/stylesheets/form.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <form action="">
+          <h1><i class="far fa-credit-card"></i> Ödeme Bilgileri</h1>
+          <div class="col-1">
+            <div>
+              <label for="cardnum">KART NUMARASI</label>
+              <input type="number" name="cardnum" />
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="date-field">
+              <label for="expirymonth">AY</label>
+              <input type="text" name="expirymonth" />
+            </div>
+            <div class="date-field">
+              <label for="expiryyear">YIL</label>
+              <input type="text" name="expiryyear" />
+            </div>
+            <div class="ccv">
+              <label for="ccv">CCV</label>
+              <input type="text" name="ccv" />
+            </div>
+          </div>
+          <div class="btns">
+            <a id="btnback" class="btn-light" href="/">GERİ DÖN</a>
+            <a id="btnpay">ÖDEME YAP</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
