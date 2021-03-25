@@ -106,7 +106,8 @@
      justify-content: space-between;
 	 align-items: flex-end;
 }
- .btns a {
+ .btns a, 
+ .btns input {
      display: inline-block;
      text-decoration: none;
      cursor: pointer;
@@ -124,7 +125,8 @@
     color: #333;
 }
 
- .btns a:hover {
+ .btns a:hover, 
+ .btns input:hover {
 	 animation-name: btn-hov;
 	 animation-duration: 550ms;
 	 animation-fill-mode: forwards;

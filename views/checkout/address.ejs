@@ -10,7 +10,7 @@
   <body>
     <div class="wrapper">
       <div class="container">
-        <form action="/checkout/enteraddress" method="POST">
+        <form action="/checkout/enteraddress" method="POST" enctype="multipart/form-data">
           <h1>
             <i class="fas fa-shipping-fast"></i>
             Adres Bilgileri
@@ -18,7 +18,7 @@
           <div class="col-1">
             <div>
               <label for="hescode">HES KODUNUZ</label>
-              <input type="text" name="hescode" />
+              <input type="text" name="hescode" required/>
             </div>
           </div>
           <div>
@@ -31,6 +31,7 @@
               name="hesqrcode"
 			  value="Fotoğraf seç"
               accept="image/png, image/jpeg"
+              required
             />
           </div>
 
@@ -60,7 +61,7 @@
               <input type="text" name="city" />
             </div>
             <div>
-              <label for="zip">POSTA KODU</label>
+              <label for="zip">TELEFON</label>
               <input type="text" name="zip" />
             </div>
           </div>
@@ -71,7 +72,7 @@
             </div>
           </div>
           <div class="btns">
-            <a id="btnback" class="btn" href="/">ÖDEME ADIMINA GİT</a>
+            <input id="btn-next" class="btn" type="submit" value="ÖDEME ADIMINA GİT"></input>
           </div>
         </form>
       </div>

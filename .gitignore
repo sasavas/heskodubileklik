@@ -1,3 +1,8 @@
+#dev folders
+uploads/
+qrcodeimages/
+
+
 # Logs
 logs
 *.log
