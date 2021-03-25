@@ -1,0 +1,29 @@
+.header-brand {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-nav ul li {
+    display: inline;
+    list-style-type: none;
+}
+
+.main-nav ul li a{
+    padding: .6rem;
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+.main-nav ul li a:hover {
+    color: black;
+}
+
+@media (max-width:736px) {
+    .header-brand {
+        display: flex;
+    }
+
+    .main-nav ul li {
+        display: block;
+    }
+}
