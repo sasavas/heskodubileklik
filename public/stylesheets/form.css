@@ -159,6 +159,10 @@ form h1:nth-of-type(2) {
 	animation-fill-mode: forwards;
 }
 
+#error {
+	margin-top: 1rem;
+}
+
 @keyframes btn-hov {
 	100% {
 		background-color: #cfc9e1;

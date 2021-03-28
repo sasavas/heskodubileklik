@@ -1,4 +1,3 @@
-
 let citiesSelect = document.getElementById("cities");
 let townsSelect = document.getElementById("towns");
 
@@ -67,7 +66,40 @@ function createTownOption(townCsv) {
   return townOption;
 }
 
-var cleave = new Cleave('.input-phone', {
+var cleave = new Cleave(".input-phone", {
   phone: true,
-  phoneRegionCode: 'TR'
+  phoneRegionCode: "TR",
+});
+
+toggleRequiredForTesting(true);
+
+function toggleRequiredForTesting(isRequired) {
+  let inputs = document.querySelectorAll("input");
+  let select = document.querySelectorAll("select");
+
+  for (let i = 0; i < inputs.length; i++) {
+    inputs[i].required = isRequired;
+  }
+  for (let i = 0; i < select.length; i++) {
+    select[i].required = isRequired;
+  }
+}
+
+let form = document.querySelector("form");
+let error = document.getElementById("error");
+let email = document.getElementById("email");
+let email2 = document.getElementById("email2");
+let addr = document.getElementById("addressline1");
+
+form.addEventListener("submit", function (e) {
+  if (email.value !== email2.value) {
+    e.preventDefault();
+    if (error.innerText == "") {
+      error.innerText =
+        "E-posta adreslerin eşleşmiyor, kontrol edip tekrar dene!";
+      setTimeout(function () {
+        error.innerText = "";
+      }, 5000);
+    }
+  }
 });

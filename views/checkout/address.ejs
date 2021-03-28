@@ -32,7 +32,7 @@
           <div class="col-1">
             <div>
               <label for="cities">ŞEHİR</label>
-              <select name="cities" id="cities" >
+              <select name="cities" id="cities">
                 <option value="" disabled selected hidden>Şehir Seç</option>
               </select>
             </div>
@@ -52,6 +52,7 @@
               <input
                 type="text"
                 name="addressline1"
+                id="addressline1"
                 placeholder="Mahalle, Sokak..."
                 
               />
@@ -64,6 +65,7 @@
               <input
                 type="text"
                 name="addressline2"
+                id="addressline2"
                 placeholder="Apartman, Kat, Daire Numarası..."
                 
               />
@@ -78,13 +80,19 @@
           <div class="col-1">
             <div>
               <label for="email">EPOSTA</label>
-              <input class="email" type="email" name="email" placeholder="e-posta adresini gir"/>
-            </div>
-            <div>
-              <label for="email">EPOSTA</label>
-              <input class="email" type="email" name="email" placeholder="e-posta adresini tekrar gir"/>
+              <input class="email" type="email" id="email" name="email" placeholder="e-posta adresini gir"/>
             </div>
           </div>
+          <div class="col-1">
+            <div>
+              <label for="email2">EPOSTA TEKRAR</label>
+              <input class="email" type="email" id="email2" name="email2" placeholder="e-posta adresini tekrar gir"/>
+            </div>
+          </div>
+          <div class="col-1">
+            <span id="error" style="color:red"></span>
+          </div>
+            
           <div class="btns btns-single">
             <input id="btn-next" class="btn" type="submit" value="ÖDEME ADIMINA GİT"></input>
           </div>
