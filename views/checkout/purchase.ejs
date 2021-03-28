@@ -15,21 +15,17 @@
           <div class="col-1">
             <div>
               <label for="cardnum">KART NUMARASI</label>
-              <input type="number" name="cardnum" />
+              <input type="text" class="credit-card" name="cardnum" required/>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-2">
             <div class="date-field">
-              <label for="expirymonth">AY</label>
-              <input type="text" name="expirymonth" />
-            </div>
-            <div class="date-field">
-              <label for="expiryyear">YIL</label>
-              <input type="text" name="expiryyear" />
+              <label for="expiry">AY</label>
+              <input type="text" class="expiry" name="expiry" placeholder="AA/YY" />
             </div>
             <div class="ccv">
               <label for="ccv">CCV</label>
-              <input type="text" name="ccv" />
+              <input type="text" class="ccv-num" name="ccv" placeholder="CCV" />
             </div>
           </div>
           <div class="btns">
@@ -39,5 +35,9 @@
         </form>
       </div>
     </div>
+
+    <script defer src="/javascripts/cleave/cleave.js"></script>
+    <script defer src="/javascripts/purchase.js"></script>
+
   </body>
 </html>

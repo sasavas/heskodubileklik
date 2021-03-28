@@ -25,8 +25,25 @@
               name="hesqrcode"
 			  value="Fotoğraf seç"
               accept="image/png, image/jpeg"
-              required
+              
             />
+          </div>
+
+          <div class="col-1">
+            <div>
+              <label for="cities">ŞEHİR</label>
+              <select name="cities" id="cities" >
+                <option value="" disabled selected hidden>Şehir Seç</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-1">
+            <div>
+              <label for="towns">İLÇE</label>
+              <select name="towns" id="towns" >
+              </select>
+            </div>
           </div>
 
           <div class="col-1">
@@ -36,26 +53,10 @@
                 type="text"
                 name="addressline1"
                 placeholder="Mahalle, Sokak..."
+                
               />
             </div>
           </div>
-
-
-          <div class="col-1">
-            <div>
-              <label for="cities">ŞEHİR</label>
-              <select name="cities" id="cities">
-              </select>
-            </div>
-          </div>
-          <div class="col-1">
-            <div>
-              <label for="towns">İLÇE</label>
-              <select name="towns" id="towns">
-              </select>
-            </div>
-          </div>
-
 
           <div class="col-1">
             <div>
@@ -64,33 +65,36 @@
                 type="text"
                 name="addressline2"
                 placeholder="Apartman, Kat, Daire Numarası..."
+                
               />
             </div>
           </div>
-          <div class="col-2">
+          <div class="col-1">
             <div>
-              <label for="city">ŞEHİR</label>
-              <input type="text" name="city" />
-            </div>
-            <div>
-              <label for="zip">TELEFON</label>
-              <input type="text" name="zip" />
+              <label for="phone">TELEFON</label>
+              <input class="input-phone" type="text" name="phone" />
             </div>
           </div>
           <div class="col-1">
             <div>
               <label for="email">EPOSTA</label>
-              <input type="email" name="email" />
+              <input class="email" type="email" name="email" placeholder="e-posta adresini gir"/>
+            </div>
+            <div>
+              <label for="email">EPOSTA</label>
+              <input class="email" type="email" name="email" placeholder="e-posta adresini tekrar gir"/>
             </div>
           </div>
-          <div class="btns">
+          <div class="btns btns-single">
             <input id="btn-next" class="btn" type="submit" value="ÖDEME ADIMINA GİT"></input>
           </div>
         </form>
       </div>
     </div>
 
-    <script src="/javascripts/address.js"></script>
+    <script defer src="/javascripts/cleave/cleave.js"></script>
+    <script defer src="/javascripts/cleave/phone.tr.js"></script>
+    <script defer src="/javascripts/address.js"></script>
 
   </body>
 </html>
