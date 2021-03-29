@@ -1,3 +1,5 @@
+toggleRequiredForTesting(false);
+
 let citiesSelect = document.getElementById("cities");
 let townsSelect = document.getElementById("towns");
 
@@ -48,6 +50,13 @@ function populateTowns(plateNr) {
         townsSelect.removeChild(townsSelect.firstChild);
       }
 
+      let initialTownOption = createTownOption("0,İlçe Seç,0");
+      initialTownOption.setAttribute("disabled", "");
+      initialTownOption.setAttribute("selected", "");
+      initialTownOption.setAttribute("hidden", "");
+      initialTownOption.setAttribute("data-default-selected", "selected");
+      townsSelect.appendChild(initialTownOption);
+
       cityTowns.forEach((t) => {
         let townOption = createTownOption(t);
         townsSelect.appendChild(townOption);
@@ -71,7 +80,6 @@ var cleave = new Cleave(".input-phone", {
   phoneRegionCode: "TR",
 });
 
-toggleRequiredForTesting(true);
 
 function toggleRequiredForTesting(isRequired) {
   let inputs = document.querySelectorAll("input");
@@ -92,14 +100,43 @@ let email2 = document.getElementById("email2");
 let addr = document.getElementById("addressline1");
 
 form.addEventListener("submit", function (e) {
+  const emailError = "E-posta adreslerin eşleşmiyor, kontrol edip tekrar dene!";
+  const cityTownError = "Şehir ve ilçe seçmen gerekiyor.";
+
+  let errorList = [];
   if (email.value !== email2.value) {
     e.preventDefault();
-    if (error.innerText == "") {
-      error.innerText =
-        "E-posta adreslerin eşleşmiyor, kontrol edip tekrar dene!";
-      setTimeout(function () {
-        error.innerText = "";
-      }, 5000);
+
+    if (errorList.indexOf(emailError) === -1) {
+      errorList.push(emailError);
     }
   }
+
+  if (townsSelect.selectedIndex === 0 || citiesSelect.selectedIndex === 0) {
+    e.preventDefault();
+    if (errorList.indexOf(cityTownError) === -1) {
+      errorList.push(cityTownError);
+    }
+  }
+
+  console.log(errorList);
+
+  showErrorList(errorList);
 });
+
+function showErrorList(errors) {
+  if (errors.length === 0) {
+    return;
+  }
+  let errorList = document.getElementById("error-list");
+  errorList.innerHTML = "";
+
+  for (let i = 0; i < errors.length; i++) {
+    let err = document.createElement("li");
+    err.innerText = errors[i];
+    errorList.appendChild(err);
+  }
+  // setTimeout(function () {
+  //   errorList.innerHTML = "";
+  // }, 10000);
+}
